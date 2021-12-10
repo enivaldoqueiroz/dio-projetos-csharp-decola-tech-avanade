@@ -1,0 +1,19 @@
+>>> NOTAS
+
+>> NAMESPACE: 
+	Os namespaces são usados para organizar as classes.
+	Para usar uma classe de outro namespace, colocamos using 
+	no começo do código.
+
+>> CLASSES:
+	Uma classe pode ter campos, propriedades, metodos e eventos
+	dentro dela que são denominados membros.
+
+>> INTERFACE:
+	É como uma classe que serve de molde para varias classes.
+	Uma classe que implementa uma interface deve implementar
+	todos os membros. 
+
+>> ENUM: 
+	Declara um conjunto de constante nomeadas que começam do
+	0 e aumentam de 1 em 1.
