@@ -1,4 +1,5 @@
 ﻿using System;
+using ExemploPOO.Interfaces;
 using ExemploPOO.Models;
 namespace ExemploPOO
 {
@@ -6,9 +7,16 @@ namespace ExemploPOO
     {
         static void Main(string[] args)
         {
-            Corrente contaCorrente = new Corrente();
+            ICalculadora calc = new Calculadora();
+            
+            Console.WriteLine("Valor da Soma: " + calc.Somar(10, 30));
+            Console.WriteLine("Valor da Soma: " + calc.Dividir(10, 30));
+            Console.WriteLine("Valor da Soma: " + calc.Multplicar(10, 30));
+            Console.WriteLine("Valor da Soma: " + calc.Subtrair(10, 30));
+
+            /*Corrente contaCorrente = new Corrente();
             contaCorrente.Creditar(100);
-            contaCorrente.ExibirSalodo();
+            contaCorrente.ExibirSalodo();*/
 
             /*Calculadora calc = new Calculadora();
             double somaComDoisParm = calc.Somar(10, 10);
