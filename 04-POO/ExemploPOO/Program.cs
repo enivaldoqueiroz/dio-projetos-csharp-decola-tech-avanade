@@ -6,12 +6,15 @@ namespace ExemploPOO
     {
         static void Main(string[] args)
         {
+            Corrente contaCorrente = new Corrente();
+            contaCorrente.Creditar(100);
+            contaCorrente.ExibirSalodo();
 
-            Calculadora calc = new Calculadora();
+            /*Calculadora calc = new Calculadora();
             double somaComDoisParm = calc.Somar(10, 10);
             double somaComTresParm = calc.Somar(10, 10, 10);
             Console.WriteLine("Resultado da primeira soma: " + somaComDoisParm);
-            Console.WriteLine("Resultado da primeira soma: " + somaComTresParm);
+            Console.WriteLine("Resultado da primeira soma: " + somaComTresParm);*/
 
             /*Aluno p1 = new Aluno();
             
