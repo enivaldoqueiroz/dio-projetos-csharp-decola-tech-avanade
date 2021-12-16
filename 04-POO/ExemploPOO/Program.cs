@@ -6,7 +6,14 @@ namespace ExemploPOO
     {
         static void Main(string[] args)
         {
-            Aluno p1 = new Aluno();
+
+            Calculadora calc = new Calculadora();
+            double somaComDoisParm = calc.Somar(10, 10);
+            double somaComTresParm = calc.Somar(10, 10, 10);
+            Console.WriteLine("Resultado da primeira soma: " + somaComDoisParm);
+            Console.WriteLine("Resultado da primeira soma: " + somaComTresParm);
+
+            /*Aluno p1 = new Aluno();
             
             p1.Nome = "Bob";
             p1.Idade = 20;
@@ -17,8 +24,9 @@ namespace ExemploPOO
             
             p2.Nome = "Jonh";
             p2.Idade = 42;
+            p2.Salario = 5000.00;
             p2.Documento = 123456;
-            p2.Apresentar();
+            p2.Apresentar();*/
         }
     }
 }
