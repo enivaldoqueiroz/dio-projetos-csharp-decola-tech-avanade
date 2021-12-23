@@ -1,18 +1,25 @@
-﻿using System;
+﻿using ExemploPOO.Helper;
 using ExemploPOO.Interfaces;
 using ExemploPOO.Models;
 namespace ExemploPOO
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            ICalculadora calc = new Calculadora();
+            var caminho = "D:\\DIO\\DECOLA-TECH-AVANADE\\dio-projetos-csharp-decola-tech-avanade\04-POO\\TrabalhandoComArquivos";
+
+            Console.WriteLine(caminho);
+
+//            FileHelper helper = new FileHelper();
+//            helper.ListarDiretorios(caminho);
+
+            /*ICalculadora calc = new Calculadora();
             
             Console.WriteLine("Valor da Soma: " + calc.Somar(10, 30));
             Console.WriteLine("Valor da Soma: " + calc.Dividir(10, 30));
             Console.WriteLine("Valor da Soma: " + calc.Multplicar(10, 30));
-            Console.WriteLine("Valor da Soma: " + calc.Subtrair(10, 30));
+            Console.WriteLine("Valor da Soma: " + calc.Subtrair(10, 30));*/
 
             /*Corrente contaCorrente = new Corrente();
             contaCorrente.Creditar(100);
