@@ -1,13 +1,14 @@
-﻿using ExemploPOO.Helper;
-using ExemploPOO.Interfaces;
-using ExemploPOO.Models;
-namespace ExemploPOO
+﻿namespace ExemploPOO
 {
     class Program
     {
         static void Main()
         {
-            var caminho = "D:\\DIO\\DECOLA-TECH-AVANADE\\dio-projetos-csharp-decola-tech-avanade\04-POO\\TrabalhandoComArquivos";
+            var caminho = "D:\\DIO\\DECOLA-TECH-AVANADE\\dio-projetos-csharp-decola-tech-avanade\\04-POO\\TrabalhandoComArquivos";
+           // var caminhoPathCombine = Path.Combine(caminho, "Pasta teste 3", "SubPastaTeste3");
+           // FileHelper helper = new FileHelper();
+           // System.Console.WriteLine("Criando diretorio: " + caminhoPathCombine);
+            //helper.CriarDiretorio(caminhoPathCombine);
 
             Console.WriteLine(caminho);
 

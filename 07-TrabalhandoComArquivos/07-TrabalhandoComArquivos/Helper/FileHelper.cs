@@ -1,4 +1,11 @@
-﻿namespace ExemploPOO.Helper
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _07_TrabalhandoComArquivos.Helper
 {
     class FileHelper
     {
@@ -16,6 +23,5 @@
             var retorno = Directory.CreateDirectory(caminho);
             System.Console.WriteLine(retorno.FullName);
         }
-
     }
 }
