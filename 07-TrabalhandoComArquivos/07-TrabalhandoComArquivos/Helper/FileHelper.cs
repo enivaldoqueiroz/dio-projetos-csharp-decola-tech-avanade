@@ -23,5 +23,10 @@ namespace _07_TrabalhandoComArquivos.Helper
             var retorno = Directory.CreateDirectory(caminho);
             System.Console.WriteLine(retorno.FullName);
         }
+
+        public void ApagarDiretorio(string caminho)
+        {
+            Directory.Delete(caminho);
+        }
     }
 }
