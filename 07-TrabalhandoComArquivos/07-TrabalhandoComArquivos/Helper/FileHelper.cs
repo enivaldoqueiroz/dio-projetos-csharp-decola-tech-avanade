@@ -18,6 +18,16 @@ namespace _07_TrabalhandoComArquivos.Helper
             }
         }
 
+        public void ListarArquivosDiretorios(string caminho)
+        {
+            var retornoArquivos = Directory.GetFiles(caminho);
+
+            foreach (var retorno in retornoArquivos)
+            {
+                System.Console.WriteLine(retorno);
+            }
+        }
+
         public void CriarDiretorio(string caminho)
         {
             var retorno = Directory.CreateDirectory(caminho);
@@ -27,6 +37,14 @@ namespace _07_TrabalhandoComArquivos.Helper
         public void ApagarDiretorio(string caminho, bool apagarArquivos)
         {
             Directory.Delete(caminho, apagarArquivos);
+        }
+
+        public void CriarArquivoTexto(string caminho, string conteudo)
+        {
+            if (File.Exists(caminho))
+            {
+                File.WriteAllText(caminho, conteudo);
+            }
         }
     }
 }
