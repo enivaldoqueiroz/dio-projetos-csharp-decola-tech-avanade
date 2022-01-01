@@ -26,7 +26,7 @@ namespace _07_TrabalhandoComArquivos.Helper
 
         public void ApagarDiretorio(string caminho, bool apagarArquivos)
         {
-            Directory.Delete(caminho);
+            Directory.Delete(caminho, apagarArquivos);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace _07_TrabalhandoComArquivos
             var caminhoPathCombine = Path.Combine(caminho, "Pasta teste 1");
             FileHelper helper = new FileHelper();
             System.Console.WriteLine("Criando diretorio: " + caminhoPathCombine);
-            helper.ApagarDiretorio(caminhoPathCombine);
+            helper.ApagarDiretorio(caminhoPathCombine, true);
             //helper.CriarDiretorio(caminhoPathCombine);
 
             //Console.WriteLine(caminho);
