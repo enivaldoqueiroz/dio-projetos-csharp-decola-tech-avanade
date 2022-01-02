@@ -1,5 +1,6 @@
 ﻿using _07_TrabalhandoComArquivos.Helper;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace _07_TrabalhandoComArquivos
@@ -12,8 +13,10 @@ namespace _07_TrabalhandoComArquivos
             var caminhoPathCombine = Path.Combine(caminho, "Pasta teste 1");
             var caminhoArquivo = Path.Combine(caminho, "arquivo-teste.txt");
             FileHelper helper = new FileHelper();
+            var listaString = new List<string> { "Linha 1", "Linha 2", "Linha 3" };
 
-            helper.CriarArquivoTexto(caminhoArquivo, "Olá! Teste de escrita de arquivo");
+            helper.CriarArquivoTextoStream(caminhoArquivo, listaString);
+            //helper.CriarArquivoTexto(caminhoArquivo, "Olá! Teste de escrita de arquivo");
             //System.Console.WriteLine("Criando diretorio: " + caminhoPathCombine);
             //helper.ApagarDiretorio(caminhoPathCombine, true);
             //helper.CriarDiretorio(caminhoPathCombine);

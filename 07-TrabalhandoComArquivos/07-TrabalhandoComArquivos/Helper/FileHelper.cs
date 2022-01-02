@@ -46,5 +46,17 @@ namespace _07_TrabalhandoComArquivos.Helper
                 File.WriteAllText(caminho, conteudo);
             }
         }
+
+        public void CriarArquivoTextoStream(string caminho, List<string> conteudo)
+        {
+            using (var stream = File.CreateText(caminho))
+            {
+                foreach (var linha in conteudo)
+                {
+                    stream.WriteLine(linha);
+                }
+            }
+
+        }
     }
 }
