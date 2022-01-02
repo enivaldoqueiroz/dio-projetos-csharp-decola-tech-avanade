@@ -16,12 +16,13 @@ namespace _07_TrabalhandoComArquivos
             var listaString = new List<string> { "Linha 1", "Linha 2", "Linha 3" };
             var listaStringContinuacao = new List<string> { "Linha 4", "Linha 5", "Linha 6" };
 
-            helper.CriarArquivoTextoStream(caminhoArquivo, listaString);
-            helper.AdicionarTextoStream(caminhoArquivo, listaStringContinuacao);
-            //helper.CriarArquivoTexto(caminhoArquivo, "Olá! Teste de escrita de arquivo");
+            //helper.AdicionarTextoStream(caminhoArquivo, listaStringContinuacao);
             //System.Console.WriteLine("Criando diretorio: " + caminhoPathCombine);
             //helper.ApagarDiretorio(caminhoPathCombine, true);
             //helper.CriarDiretorio(caminhoPathCombine);
+            //helper.CriarArquivoTexto(caminhoArquivo, "Olá! Teste de escrita de arquivo");
+            //helper.CriarArquivoTextoStream(caminhoArquivo, listaString);
+            helper.LerArquivoStream(caminhoArquivo);
 
             //Console.WriteLine(caminho);
         }
