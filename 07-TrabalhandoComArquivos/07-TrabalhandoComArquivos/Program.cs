@@ -12,6 +12,7 @@ namespace _07_TrabalhandoComArquivos
             var caminho = "D:\\DIO\\DECOLA-TECH-AVANADE\\dio-projetos-csharp-decola-tech-avanade\\07-TrabalhandoComArquivos\\TrabalhandoComArquivos";
             var caminhoPathCombine = Path.Combine(caminho, "Pasta teste 1");
             var caminhoArquivo = Path.Combine(caminho, "arquivo-teste-stream.txt");
+            var caminhoArquivoCopia = Path.Combine(caminho, "arquivo-teste-stream-bkp.txt");
             var novoCaminhoArquivo = Path.Combine(caminho, "Pasta Teste 2", "arquivo-teste-stream.txt");
             FileHelper helper = new FileHelper();
             var listaString = new List<string> { "Linha 1", "Linha 2", "Linha 3" };
@@ -24,7 +25,8 @@ namespace _07_TrabalhandoComArquivos
             //helper.CriarArquivoTexto(caminhoArquivo, "Olá! Teste de escrita de arquivo");
             //helper.CriarArquivoTextoStream(caminhoArquivo, listaString);
             //helper.LerArquivoStream(caminhoArquivo);
-            helper.MoverArquivo(caminhoArquivo, novoCaminhoArquivo);
+            //helper.MoverArquivo(caminhoArquivo, novoCaminhoArquivo);
+            helper.DeletarArquivo(caminhoArquivoCopia);
 
             //Console.WriteLine(caminho);
         }

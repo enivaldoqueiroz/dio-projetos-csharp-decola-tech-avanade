@@ -103,5 +103,10 @@ namespace _07_TrabalhandoComArquivos.Helper
         {
             File.Move(caminho, novoCaminho);
         }
+
+        public void DeletarArquivo(string caminho)
+        {
+            File.Delete(caminho);
+        }
     }
 }
