@@ -98,5 +98,10 @@ namespace _07_TrabalhandoComArquivos.Helper
                 }
             }
         }
+
+        public void MoverArquivo(string caminho, string novoCaminho)
+        {
+            File.Move(caminho, novoCaminho);
+        }
     }
 }
