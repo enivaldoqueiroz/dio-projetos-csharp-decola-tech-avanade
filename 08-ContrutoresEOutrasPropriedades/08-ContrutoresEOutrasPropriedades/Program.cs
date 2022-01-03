@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _08_ContrutoresEOutrasPropriedades.Model;
+using System;
 
 namespace _08_ContrutoresEOutrasPropriedades
 {
@@ -6,7 +7,11 @@ namespace _08_ContrutoresEOutrasPropriedades
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Pessoa pessoa = new Pessoa("Enivaldo", "Queiroz");
+
+            pessoa.Apresentar();
+
+
         }
     }
 }
