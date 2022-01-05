@@ -11,11 +11,14 @@ namespace _08_ContrutoresEOutrasPropriedades
 
             pessoa.Apresentar();*/
 
-            Log log = Log.GetInstance();
+            /*Log log = Log.GetInstance();
             log.PropriedadeLog = "Teste Instancia";
 
             Log log2 = Log.GetInstance();
-            Console.WriteLine(log2.PropriedadeLog);
+            Console.WriteLine(log2.PropriedadeLog);*/
+
+            Matematica m = new Matematica(10 , 20);
+            m.Somar();
 
 
         }
