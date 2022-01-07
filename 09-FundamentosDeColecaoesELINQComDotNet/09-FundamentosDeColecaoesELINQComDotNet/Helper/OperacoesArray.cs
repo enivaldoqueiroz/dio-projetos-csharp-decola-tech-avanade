@@ -32,5 +32,10 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet.Helper
                 Console.WriteLine(array[i]);
             }
         }
+
+        public void Ordenar(ref int[] array)
+        {
+            Array.Sort(array);
+        }
     }
 }

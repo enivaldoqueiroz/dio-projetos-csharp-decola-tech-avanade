@@ -13,7 +13,9 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
 
             Console.WriteLine("Array Original: ");
             op.ImprimirArray(array);
-            op.OrdernarBubblerSort(ref array);
+
+            //op.OrdernarBubblerSort(ref array);
+            op.Ordenar(ref array);
 
             Console.WriteLine("Array Ordenado: ");
             op.ImprimirArray(array);
