@@ -9,7 +9,9 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
         {
 
             OperacoesArray op = new OperacoesArray();
+
             int[] array = new int[5] { 6, 3, 8, 1, 9};
+            int[] arrayCopia = new int[10];
 
             Console.WriteLine("Array Original: ");
             op.ImprimirArray(array);
@@ -19,6 +21,13 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
 
             Console.WriteLine("Array Ordenado: ");
             op.ImprimirArray(array);
+
+            Console.WriteLine("Array antes de cópia");
+            op.ImprimirArray(arrayCopia);
+
+            Console.WriteLine("Array antes de cópia");
+            op.Copiar(ref array, ref arrayCopia);
+            op.ImprimirArray(arrayCopia);
 
             /*
 
