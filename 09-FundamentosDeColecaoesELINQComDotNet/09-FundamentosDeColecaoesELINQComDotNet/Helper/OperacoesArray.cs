@@ -47,5 +47,10 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet.Helper
         {
             return Array.Exists(array, elemento => elemento == valor);
         }
+
+        public bool TodosMaiorQue(int[] array, int valor)
+        {
+            return Array.TrueForAll(array, elemente => elemente > valor);
+        }
     }
 }

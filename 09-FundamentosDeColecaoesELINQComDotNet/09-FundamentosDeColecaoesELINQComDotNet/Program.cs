@@ -13,17 +13,29 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
             int[] array = new int[5] { 6, 3, 8, 1, 9};
             int[] arrayCopia = new int[10];
 
-            int valorProcurado = 8;
-            bool existe = op.Existe(array, valorProcurado);
+            int valorProcurado = 5;
 
-            if (existe)
+            bool todosMairQue = op.TodosMaiorQue(array, valorProcurado);
+
+            if (todosMairQue)
             {
-                Console.WriteLine($"Valor {valorProcurado} foi encontrado");
+                Console.WriteLine("Todos os valores são maior que {0}", valorProcurado);
             }
             else
             {
-                Console.WriteLine($"Valor {valorProcurado} não foi encontrado");
+                Console.WriteLine("Existe valores que não são maiores do que {0}", valorProcurado);
             }
+
+            //bool existe = op.Existe(array, valorProcurado);
+
+            //if (existe)
+            //{
+            //    Console.WriteLine($"Valor {valorProcurado} foi encontrado");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Valor {valorProcurado} não foi encontrado");
+            //}
 
             //Console.WriteLine("Array Original: ");
             //op.ImprimirArray(array);
