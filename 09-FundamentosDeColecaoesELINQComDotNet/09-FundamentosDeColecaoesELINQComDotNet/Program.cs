@@ -13,21 +13,33 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
             int[] array = new int[5] { 6, 3, 8, 1, 9};
             int[] arrayCopia = new int[10];
 
-            Console.WriteLine("Array Original: ");
-            op.ImprimirArray(array);
+            int valorProcurado = 8;
+            bool existe = op.Existe(array, valorProcurado);
 
-            //op.OrdernarBubblerSort(ref array);
-            op.Ordenar(ref array);
+            if (existe)
+            {
+                Console.WriteLine($"Valor {valorProcurado} foi encontrado");
+            }
+            else
+            {
+                Console.WriteLine($"Valor {valorProcurado} não foi encontrado");
+            }
 
-            Console.WriteLine("Array Ordenado: ");
-            op.ImprimirArray(array);
+            //Console.WriteLine("Array Original: ");
+            //op.ImprimirArray(array);
 
-            Console.WriteLine("Array antes de cópia");
-            op.ImprimirArray(arrayCopia);
+            ////op.OrdernarBubblerSort(ref array);
+            //op.Ordenar(ref array);
 
-            Console.WriteLine("Array antes de cópia");
-            op.Copiar(ref array, ref arrayCopia);
-            op.ImprimirArray(arrayCopia);
+            //Console.WriteLine("Array Ordenado: ");
+            //op.ImprimirArray(array);
+
+            //Console.WriteLine("Array antes de cópia");
+            //op.ImprimirArray(arrayCopia);
+
+            //Console.WriteLine("Array antes de cópia");
+            //op.Copiar(ref array, ref arrayCopia);
+            //op.ImprimirArray(arrayCopia);
 
             /*
 
