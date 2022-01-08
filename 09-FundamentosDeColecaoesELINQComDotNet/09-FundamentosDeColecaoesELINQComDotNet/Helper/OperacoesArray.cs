@@ -52,5 +52,10 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet.Helper
         {
             return Array.TrueForAll(array, elemente => elemente > valor);
         }
+
+        public int ObterValor(int[] array, int valor)
+        {
+            return Array.Find(array, elemente => elemente == valor);
+        }
     }
 }
