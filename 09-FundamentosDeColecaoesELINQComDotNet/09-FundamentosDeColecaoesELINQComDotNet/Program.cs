@@ -8,7 +8,7 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
     {
         static void Main(string[] args)
         {
-
+            OperacoesLista opLista = new OperacoesLista();
             List<string> estados = new List<string>();
             estados.Add("SP");
             estados.Add("MG");
@@ -16,20 +16,21 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
 
             Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
+            opLista.ImplimirListaString(estados);
 
-            Console.WriteLine("Usando Foreach");
-            int indice = 0;
-            foreach (var item in estados)
-            {
-                Console.WriteLine($"Índice {indice}, valor: {item}");
-                indice++;
-            }
+            Console.WriteLine("Removenodo o elemento");
+            estados.Remove("MG");
 
-            Console.WriteLine("Usando For");
-            for (int i = 0; i < estados.Count; i++)
-            {
-                Console.WriteLine($"Índice {i}, valor: {estados[i]}");
-            }
+            opLista.ImplimirListaString(estados);
+
+
+            //Console.WriteLine("Usando Foreach");
+            //int indice = 0;
+            //foreach (var item in estados)
+            //{
+            //    Console.WriteLine($"Índice {indice}, valor: {item}");
+            //    indice++;
+            //}
 
             //OperacoesArray op = new OperacoesArray();
 
