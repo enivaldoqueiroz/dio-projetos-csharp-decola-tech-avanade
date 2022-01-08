@@ -8,24 +8,28 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
     {
         static void Main(string[] args)
         {
-            OperacoesLista opLista = new OperacoesLista();
-            List<string> estados = new List<string> { "SP", "MG", "BA" };
-            string[] estadosArray = new string[2] { "SC", "MT" };
+            Queue<string> fila = new Queue<string>();
+
+            
+
+            //OperacoesLista opLista = new OperacoesLista();
+            //List<string> estados = new List<string> { "SP", "MG", "BA" };
+            //string[] estadosArray = new string[2] { "SC", "MT" };
 
             //estados.Add("SP");
             //estados.Add("MG");
             //estados.Add("BA");
 
-            Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
+            //Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
-            opLista.ImplimirListaString(estados);
+            //opLista.ImplimirListaString(estados);
 
             //Console.WriteLine("Removenodo o elemento");
             //estados.Remove("MG");
 
             //estados.AddRange(estadosArray);
-            estados.Insert(1, "RJ");
-            opLista.ImplimirListaString(estados);
+            //estados.Insert(1, "RJ");
+            //opLista.ImplimirListaString(estados);
 
 
             //Console.WriteLine("Usando Foreach");
