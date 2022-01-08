@@ -57,5 +57,10 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet.Helper
         {
             return Array.Find(array, elemente => elemente == valor);
         }
+
+        public int ObterIndice(int[] array, int valor)
+        {
+            return Array.IndexOf(array, valor);
+        }
     }
 }

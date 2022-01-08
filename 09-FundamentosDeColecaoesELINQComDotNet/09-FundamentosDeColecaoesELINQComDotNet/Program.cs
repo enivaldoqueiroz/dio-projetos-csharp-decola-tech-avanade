@@ -13,18 +13,29 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
             int[] array = new int[5] { 6, 3, 8, 1, 9};
             int[] arrayCopia = new int[10];
 
-            int valorProcurado = 1;
+            int valorProcurado = 10;
 
-            int valorAchado = op.ObterValor(array, valorProcurado);
+            int indice = op.ObterIndice(array, valorProcurado);
 
-            if (valorAchado > 0)
+            if (indice > -1)
             {
-                Console.WriteLine("Valor encontrado");
+                Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
             }
             else
             {
-                Console.WriteLine("Valor não encontrado");
+                Console.WriteLine("Valor não existente no array");
             }
+
+            //int valorAchado = op.ObterValor(array, valorProcurado);
+
+            //if (valorAchado > 0)
+            //{
+            //    Console.WriteLine("Valor encontrado");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Valor não encontrado");
+            //}
 
             //bool todosMairQue = op.TodosMaiorQue(array, valorProcurado);
 
