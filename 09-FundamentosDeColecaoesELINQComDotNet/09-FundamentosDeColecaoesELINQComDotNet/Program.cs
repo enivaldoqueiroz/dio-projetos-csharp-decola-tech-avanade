@@ -23,7 +23,8 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
             //Console.WriteLine("Removenodo o elemento");
             //estados.Remove("MG");
 
-            estados.AddRange(estadosArray);
+            //estados.AddRange(estadosArray);
+            estados.Insert(1, "RJ");
             opLista.ImplimirListaString(estados);
 
 
