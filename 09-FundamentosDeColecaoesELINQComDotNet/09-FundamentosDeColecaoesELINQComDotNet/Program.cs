@@ -1,5 +1,6 @@
 ﻿using _09_FundamentosDeColecaoesELINQComDotNet.Helper;
 using System;
+using System.Collections.Generic;
 
 namespace _09_FundamentosDeColecaoesELINQComDotNet
 {
@@ -8,23 +9,45 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
         static void Main(string[] args)
         {
 
-            OperacoesArray op = new OperacoesArray();
+            List<string> estados = new List<string>();
+            estados.Add("SP");
+            estados.Add("MG");
+            estados.Add("BA");
 
-            int[] array = new int[5] { 6, 3, 8, 1, 9};
-            int[] arrayCopia = new int[10];
+            Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
-            int valorProcurado = 10;
 
-            int indice = op.ObterIndice(array, valorProcurado);
-
-            if (indice > -1)
+            Console.WriteLine("Usando Foreach");
+            int indice = 0;
+            foreach (var item in estados)
             {
-                Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
+                Console.WriteLine($"Índice {indice}, valor: {item}");
+                indice++;
             }
-            else
+
+            Console.WriteLine("Usando For");
+            for (int i = 0; i < estados.Count; i++)
             {
-                Console.WriteLine("Valor não existente no array");
+                Console.WriteLine($"Índice {i}, valor: {estados[i]}");
             }
+
+            //OperacoesArray op = new OperacoesArray();
+
+            //int[] array = new int[5] { 6, 3, 8, 1, 9};
+            //int[] arrayCopia = new int[10];
+
+            //int valorProcurado = 10;
+
+            //int indice = op.ObterIndice(array, valorProcurado);
+
+            //if (indice > -1)
+            //{
+            //    Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Valor não existente no array");
+            //}
 
             //int valorAchado = op.ObterValor(array, valorProcurado);
 
