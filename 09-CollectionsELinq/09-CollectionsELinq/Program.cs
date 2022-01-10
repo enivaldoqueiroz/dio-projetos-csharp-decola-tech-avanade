@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _09_CollectionsELinq
 {
@@ -7,29 +8,42 @@ namespace _09_CollectionsELinq
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> estados = new Dictionary<string, string>();
+            int[] arrayNumeros = new int[5] { 1, 4, 8, 15, 19 };
 
-            estados.Add("SP", "São Paulo");
-            estados.Add("MG", "Minas Gerais");
-            estados.Add("CE", "Ceará");
+            //Verificar se o numero é par com LINQ
+            var numerosParesQuery =
+                from num in arrayNumeros
+                where num % 2 == 0
+                orderby num
+                select num;
+            var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
 
-            foreach (KeyValuePair<string, string> item in estados)
-            {
-                //Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
-            }
+            Console.WriteLine("Numeros pares quary: " + string.Join(", ", numerosParesQuery));
+            Console.WriteLine("Numeros pares quary: " + string.Join(", ", numerosParesMetodo));
 
-            string valorPrucurado = "MM";
+            //Dictionary<string, string> estados = new Dictionary<string, string>();
 
-            //var teste = estados["SC"];
+            //estados.Add("SP", "São Paulo");
+            //estados.Add("MG", "Minas Gerais");
+            //estados.Add("CE", "Ceará");
 
-            if (estados.TryGetValue(valorPrucurado, out string estadoEncontrado))
-            {
-                Console.WriteLine(estadoEncontrado);
-            }
-            else
-            {
-                Console.WriteLine($"Chave {valorPrucurado} não existe no dicionario");
-            }
+            //foreach (KeyValuePair<string, string> item in estados)
+            //{
+            //    //Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            //}
+
+            //string valorPrucurado = "MM";
+
+            ////var teste = estados["SC"];
+
+            //if (estados.TryGetValue(valorPrucurado, out string estadoEncontrado))
+            //{
+            //    Console.WriteLine(estadoEncontrado);
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Chave {valorPrucurado} não existe no dicionario");
+            //}
 
             //Console.WriteLine($"Removendo o valor: {valorPrucurado}");
             //estados.Remove(valorPrucurado);
