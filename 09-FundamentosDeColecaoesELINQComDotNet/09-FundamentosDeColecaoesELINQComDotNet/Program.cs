@@ -1,5 +1,6 @@
 ﻿using _09_FundamentosDeColecaoesELINQComDotNet.Helper;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace _09_FundamentosDeColecaoesELINQComDotNet
@@ -8,21 +9,36 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
     {
         static void Main(string[] args)
         {
-            Queue<string> fila = new Queue<string>();
+            Stack<string> pilhaLivros = new Stack<string>();
 
-            fila.Enqueue("Enivaldo");
-            fila.Enqueue("Lana");
-            fila.Enqueue("Mila");
-            fila.Enqueue("Maia");
+            pilhaLivros.Push(".NET");
+            pilhaLivros.Push("DDD");
+            pilhaLivros.Push("Código Limpo");
 
-            Console.WriteLine($"Pessoas na fila: {fila.Count}");
-            while (fila.Count > 0)
+            Console.WriteLine($"Livros para a leitura: {pilhaLivros.Count}");
+            while (pilhaLivros.Count > 0)
             {
-                Console.WriteLine($"Vez de: {fila.Peek()}");
-                Console.WriteLine($"{fila.Dequeue()} atendido");
+                Console.WriteLine($"Próximo Livro para a leitura: {pilhaLivros.Peek()}");
+                Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
             }
 
-            Console.WriteLine($"Pessoas na fila: {fila.Count}");
+            Console.WriteLine($"Livros para a leitura: {pilhaLivros.Count}");
+
+            //Queue<string> fila = new Queue<string>();
+
+            //fila.Enqueue("Enivaldo");
+            //fila.Enqueue("Lana");
+            //fila.Enqueue("Mila");
+            //fila.Enqueue("Maia");
+
+            //Console.WriteLine($"Pessoas na fila: {fila.Count}");
+            //while (fila.Count > 0)
+            //{
+            //    Console.WriteLine($"Vez de: {fila.Peek()}");
+            //    Console.WriteLine($"{fila.Dequeue()} atendido");
+            //}
+
+            //Console.WriteLine($"Pessoas na fila: {fila.Count}");
 
             //OperacoesLista opLista = new OperacoesLista();
             //List<string> estados = new List<string> { "SP", "MG", "BA" };
