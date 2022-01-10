@@ -1,9 +1,7 @@
-﻿using _09_FundamentosDeColecaoesELINQComDotNet.Helper;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 
-namespace _09_FundamentosDeColecaoesELINQComDotNet
+namespace _09_CollectionsELinq
 {
     class Program
     {
