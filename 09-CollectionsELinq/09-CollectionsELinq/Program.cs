@@ -15,18 +15,29 @@ namespace _09_CollectionsELinq
 
             foreach (KeyValuePair<string, string> item in estados)
             {
-                Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+                //Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
             }
 
-            string valorPrucurado = "MG";
+            string valorPrucurado = "MM";
 
-            Console.WriteLine($"Removendo o valor: {valorPrucurado}");
-            estados.Remove(valorPrucurado);
+            //var teste = estados["SC"];
 
-            foreach (KeyValuePair<string, string> item in estados)
+            if (estados.TryGetValue(valorPrucurado, out string estadoEncontrado))
             {
-                Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+                Console.WriteLine(estadoEncontrado);
             }
+            else
+            {
+                Console.WriteLine($"Chave {valorPrucurado} não existe no dicionario");
+            }
+
+            //Console.WriteLine($"Removendo o valor: {valorPrucurado}");
+            //estados.Remove(valorPrucurado);
+
+            //foreach (KeyValuePair<string, string> item in estados)
+            //{
+            //    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            //}
             //Console.WriteLine("Valor original: ");
             //Console.WriteLine(estados[valorPrucurado]);
 
