@@ -18,6 +18,23 @@ namespace _09_CollectionsELinq
                 Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
             }
 
+            string valorPrucurado = "MG";
+
+            Console.WriteLine($"Removendo o valor: {valorPrucurado}");
+            estados.Remove(valorPrucurado);
+
+            foreach (KeyValuePair<string, string> item in estados)
+            {
+                Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+            }
+            //Console.WriteLine("Valor original: ");
+            //Console.WriteLine(estados[valorPrucurado]);
+
+            //estados[valorPrucurado] = "CE - Teste Atualização";
+
+            //Console.WriteLine("Valor atualizado");
+            //Console.WriteLine(estados[valorPrucurado]);
+
             //Stack<string> pilhaLivros = new Stack<string>();
 
             //pilhaLivros.Push(".NET");
