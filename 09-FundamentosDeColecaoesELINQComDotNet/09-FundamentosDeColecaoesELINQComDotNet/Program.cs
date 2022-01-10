@@ -10,7 +10,19 @@ namespace _09_FundamentosDeColecaoesELINQComDotNet
         {
             Queue<string> fila = new Queue<string>();
 
-            
+            fila.Enqueue("Enivaldo");
+            fila.Enqueue("Lana");
+            fila.Enqueue("Mila");
+            fila.Enqueue("Maia");
+
+            Console.WriteLine($"Pessoas na fila: {fila.Count}");
+            while (fila.Count > 0)
+            {
+                Console.WriteLine($"Vez de: {fila.Peek()}");
+                Console.WriteLine($"{fila.Dequeue()} atendido");
+            }
+
+            Console.WriteLine($"Pessoas na fila: {fila.Count}");
 
             //OperacoesLista opLista = new OperacoesLista();
             //List<string> estados = new List<string> { "SP", "MG", "BA" };
