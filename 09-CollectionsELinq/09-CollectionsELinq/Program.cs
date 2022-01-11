@@ -8,19 +8,54 @@ namespace _09_CollectionsELinq
     {
         static void Main(string[] args)
         {
-            int[] arrayNumeros = new int[9] { 100, 1, 4, 0, 8, 15, 19, 4, 100 };
 
-            var minimo = arrayNumeros.Min();
-            var maximo = arrayNumeros.Max();
-            var medio = arrayNumeros.Average();
-            var soma = arrayNumeros.Sum();
-            var arrayUnico = arrayNumeros.Distinct().ToArray();
+            //string nome = "TESTE_ALGUMACOISA.100";
+            //string nome = "TESTE_ALGUMACOISA.REM";
+            string nome = "TESTE_ALGUMACOISA.REM";
 
-            Console.WriteLine($"Minimo: {minimo}");
-            Console.WriteLine($"Maximo: {maximo}");
-            Console.WriteLine($"Soma: {soma}");
-            Console.WriteLine($"Array original: {string.Join(", ", arrayNumeros)}");
-            Console.WriteLine($"Array distanto: {string.Join(", ", arrayUnico)}");
+            string subNome = nome.Substring(nome.Length - 4);
+
+
+            if (subNome == ".REM")
+            {
+                Console.WriteLine("Nome terminar com .REM");
+            }
+            else
+            {
+                Console.WriteLine("Nome não termina com .REM");
+            }
+
+            //Console.WriteLine("Digite um numero: ");
+            //int numero = int.Parse(Console.ReadLine());
+
+            //bool IsTrue = numero % 2 == 0;
+            //int contador = 0;
+
+            //if (IsTrue)
+            //{
+            //    Console.WriteLine($"Numero {numero} é par");
+            //    contador++;
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Numero {numero} é impar");
+            //}
+
+            //Console.WriteLine("Quantidade de pares digitadas " + contador);
+            
+            //int[] arrayNumeros = new int[9] { 100, 1, 4, 0, 8, 15, 19, 4, 100 };
+
+            //var minimo = arrayNumeros.Min();
+            //var maximo = arrayNumeros.Max();
+            //var medio = arrayNumeros.Average();
+            //var soma = arrayNumeros.Sum();
+            //var arrayUnico = arrayNumeros.Distinct().ToArray();
+
+            //Console.WriteLine($"Minimo: {minimo}");
+            //Console.WriteLine($"Maximo: {maximo}");
+            //Console.WriteLine($"Soma: {soma}");
+            //Console.WriteLine($"Array original: {string.Join(", ", arrayNumeros)}");
+            //Console.WriteLine($"Array distanto: {string.Join(", ", arrayUnico)}");
 
 
 
@@ -243,6 +278,6 @@ namespace _09_CollectionsELinq
             {
                 System.Console.WriteLine(item);
             }*/
-        }
+        //}
     }
 }
