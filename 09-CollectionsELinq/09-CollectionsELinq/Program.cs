@@ -8,14 +8,21 @@ namespace _09_CollectionsELinq
     {
         static void Main(string[] args)
         {
-            int[] arrayNumeros = new int[7] { 100, 1, 4, 0, 8, 15, 19 };
+            int[] arrayNumeros = new int[9] { 100, 1, 4, 0, 8, 15, 19, 4, 100 };
 
             var minimo = arrayNumeros.Min();
             var maximo = arrayNumeros.Max();
             var medio = arrayNumeros.Average();
+            var soma = arrayNumeros.Sum();
+            var arrayUnico = arrayNumeros.Distinct().ToArray();
 
             Console.WriteLine($"Minimo: {minimo}");
             Console.WriteLine($"Maximo: {maximo}");
+            Console.WriteLine($"Soma: {soma}");
+            Console.WriteLine($"Array original: {string.Join(", ", arrayNumeros)}");
+            Console.WriteLine($"Array distanto: {string.Join(", ", arrayUnico)}");
+
+
 
             //Verificar se o numero é par com LINQ
             //var numerosParesQuery =
