@@ -31,12 +31,12 @@ namespace _10_Localiza.Frotas
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "Localiza.Frotas",
+                    Title = "10-Localiza.Frotas",
                     Description = "API - Frotas",
                     Version = "v1"
                 });
 
-                var apiPath = Path.Combine(AppContext.BaseDirectory, "Localiza.Frotas.xml");
+                var apiPath = Path.Combine(AppContext.BaseDirectory, "10-Localiza.Frotas.xml");
                 c.IncludeXmlComments(apiPath);
             });
         }
