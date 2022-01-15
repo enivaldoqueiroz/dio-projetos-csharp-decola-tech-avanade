@@ -1,45 +1,35 @@
 ﻿using Localiza.Frotas.Domain;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Localiza.Frotas.Infra.Repository
 {
-    class InMemoryRepository : IVeiculoRepository
+    public class InMemoryRepository : IVeiculoRepository
     {
-        public void Add(Veiculo veiculo)
-        {
-            throw new NotImplementedException();
-        }
+        private readonly IList<Veiculo> entities = new List<Veiculo>();
 
-        public void Delete(Veiculo veiculo)
-        {
-            throw new NotImplementedException();
-        }
+        public void Add(Veiculo veiculo) => entities.Add(veiculo);
 
-        public void Delete(object veiculo)
-        {
-            throw new NotImplementedException();
-        }
+        public void Delete(Veiculo veiculo) => entities.Remove(veiculo);
 
         public IEnumerable<Veiculo> GetAll()
         {
-            throw new NotImplementedException();
+            return entities.ToList();
         }
 
-        public object GetById(Guid id)
+        public Veiculo GetById(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Veiculo GetVeiculo(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+        public Veiculo GetVeiculo(Guid id) => entities.SingleOrDefault(c => c.Id == id);
 
         public void Update(Veiculo veiculo)
         {
-            throw new NotImplementedException();
+            entities.Remove(GetById(veiculo.Id));
+            entities.Add(veiculo);
         }
     }
 }
