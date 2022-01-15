@@ -14,6 +14,6 @@ namespace Localiza.Frotas.Domain
         void Delete(Veiculo veiculo);
         void Update(Veiculo veiculo);
         Veiculo GetById(Guid id);
-        void Delete(object veiculo);
+        
     }
 }
