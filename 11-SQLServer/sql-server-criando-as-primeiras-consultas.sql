@@ -79,3 +79,53 @@ Create table PedidoItem
 	Preco float not null,
 	Quantidade int not null
 )
+
+------------------------------------------------------------------------
+--Comando Insert, Select, Update, Delete
+
+select * from Clientes
+
+insert into Clientes(codigo, nome, tipoPessoa) values (1, 'Mila', 'F');
+insert Clientes(codigo, nome, tipoPessoa) values (2, 'Lana', 'F');
+insert Clientes(tipoPessoa, codigo, nome) values ('F', 3, 'Enivaldo');
+insert Clientes values (4, 'Bernardo', 'F');
+insert Clientes values (5, 'Rivia', 'F'), (6,'Maia','J');
+
+-- Selecionar
+select *
+from Clientes
+where TipoPessoa = 'J'
+
+--Editar
+update Clientes
+set Codigo = 7,
+    Nome = 'Jose'
+where TipoPessoa = 'J'
+
+--Deletar
+delete 
+from Clientes
+where Codigo in (5,4,3)
+
+/*
+
+AND
+
+V AND V = V
+V AND F = F
+F AND V = F
+F AND F = F
+
+OR
+
+V OR V = V
+V OR F = V
+F OR V = V
+F OR F = F
+*/
+--Exemplo: 
+
+select *
+from Clientes
+where Codigo = 1 
+OR TipoPessoa = 'J'
