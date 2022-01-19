@@ -20,6 +20,13 @@ ALTER TABLE PROSUTOS
 		PRIMARY KEY (CODIGO)
 ;
 
+--Como criar índices e realizar inserts
+CREATE INDEX IDX01_PRODUTOS
+			ON PRODUTOS(EAN)
+;
+
+INSERT INTO PRODUTOS VALUES (1, 'Nome do Produto', GETDATE(), '9780201379', 0)
+
 
 -------------------------------------------------------------
 -------------------------------------------------------------
