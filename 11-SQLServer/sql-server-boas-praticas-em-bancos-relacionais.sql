@@ -1,4 +1,9 @@
 --SQL Server: Boas práticas em bancos relacionais
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+--O funcionamento de um banco de dados - Parte 1
+--O funcionamento de um banco de dados - Parte 2
 
 CREATE TABLE PRODUTOS 
 (
@@ -8,3 +13,13 @@ CREATE TABLE PRODUTOS
 	EAN				VARCHAR(15) NOT NULL,
 	IND_INATIVO		INT			NOT NULL DEFAULT 0
 )
+;
+
+ALTER TABLE PROSUTOS
+	ADD CONSTRAINT PK_PRODUTOS
+		PRIMARY KEY (CODIGO)
+;
+
+
+-------------------------------------------------------------
+-------------------------------------------------------------
