@@ -160,3 +160,51 @@ from Clientes
 
 select *, CONVERT(varchar, DataSolicitacao, 103)
 from Pedido
+
+select * from Clientes
+
+alter table Clientes add constraint pk_cliente primary key (Codigo)
+
+insert Cliente values(1, 'Julio', getdate())
+
+select * from Produtos
+select * from PedidoItem
+
+alter table PedidoItem add constraint fk_pedido foreign key (CodigoPedido) references Pedido (Codigo)
+
+
+select * from Clientes
+
+select * from Telefones
+
+Id CodigoCliente DDD Telefone
+
+update Pedito set codigostatus = 1, descstatus = 'Em andamento'
+
+
+inner join
+left join
+right join
+
+select *
+from Clientes cli
+inner join Pedido ped
+on cli.Codigo = ped.CodigoCliente
+
+select *
+from Clientes cli
+left join Pedido ped
+on cli.Codigo = ped.CodigoCliente
+
+select *
+from Clientes cli
+right join Pedido ped
+on cli.Codigo = ped.CodigoCliente
+
+select *
+from PedidoItem tl
+inner join PedidoItemLog t2
+on t1.CodigoPedido = t2.CodigoPedido
+and t1.CodigoProduto = t2.CodigoProduto
+inner join StatusPedido t3
+on t3.Codigo = t2CodigoStatusPedido
