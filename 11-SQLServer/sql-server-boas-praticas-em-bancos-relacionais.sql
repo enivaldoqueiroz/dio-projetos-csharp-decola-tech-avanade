@@ -25,8 +25,26 @@ CREATE INDEX IDX01_PRODUTOS
 			ON PRODUTOS(EAN)
 ;
 
-INSERT INTO PRODUTOS VALUES (1, 'Nome do Produto', GETDATE(), '9780201379', 0)
+INSERT INTO PRODUTOS VALUES (1, 'Nome do Produto', GETDATE(), '9780201379', 0);
 
+--Realizando inserts em campos específicos
+
+INSERT INTO PRODUTOS (CODIGO, DESCRICAO, EAN) VALUES (2, 'Nome do Produto 2', '1234567890');
+
+SELECT * FROM PRODUTOS;
+
+SELECT * 
+  FROM PRODUTOS
+ WHERE CODIGO = 2;
+
+ -- Consulta não indexada
+SELECT * 
+  FROM PRODUTOS
+ WHERE DESCRICAO LIKE '%Produto'; --Trazer qualquer coisa que termine com Produto
+
+ SELECT * 
+  FROM PRODUTOS
+ WHERE DESCRICAO LIKE '%Produto%'; --Trazer Produto em qualquer parte do texto
 
 -------------------------------------------------------------
 -------------------------------------------------------------
