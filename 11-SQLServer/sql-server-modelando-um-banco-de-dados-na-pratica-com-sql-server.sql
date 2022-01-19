@@ -49,3 +49,33 @@ ALTER TABLE Pilotos ADD CONSTRAINT PK_Pilotos PRIMARY KEY (IdPiloto)
 GO
 ALTER TABLE Pilotos ADD CONSTRAINT FK_Pilotos_Planetas FOREIGN KEY (IdPlaneta)
 REFERENCES Planetas (IdPlaneta)
+
+CREATE PilotosNaves
+(
+	IdPiloto		INT NOT NULL,
+	IdNave			INT NOT NULL,
+	FlagAutorizado	BIT NOT NULL
+)
+GO
+ALTER TABLE PilotoNaves ADD CONSTRAINT PK_PilotosNaves PRIMARY KEY (IdPiloto, IdNave)
+GO
+ALTER TABLE PilotosNaves ADD CONSTRAINT FK_PilotosNaves FOREIGN KEY (IdPiloto)
+REFERENCES Pilotos (IdPiloto)
+GO
+ALTER TABLE PilotosNaves ADD CONSTRAINT FK_PilotosNaves FOREIGN KEY (IdNave)
+REFERENCES Naves (IdNave)
+GO
+ALTER TABLE PilotosNaves ADD CONSTRAINT DF_PilotosNaves_FlagAutorizado DEFAULT (1) FOR FlagAutorizado
+
+CREATE TABLE HistoricoViagens
+(
+	IdNave		INT			NOT NULL,
+	IdPiloto	INT			NOT NULL,
+	DataSaida	DATETIME	NOT NULL,
+	DataChegada DATETIME	NULL
+)
+GO
+ALTER TABLE HistoiricoViagens ADD CONSTRAINT FK_HistoricoViagens_PilotosNaves FOREIGN KEY (IdPiloto)
+REFERENCES PilotosNaves (IdPiloto, IdNave)
+GO
+ALTER TABLE HistoricoViagens CHECK CONSTRAINT FK_HistoricoViagens_PilotosNaves
